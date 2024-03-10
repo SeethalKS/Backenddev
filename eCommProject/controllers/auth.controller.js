@@ -21,6 +21,7 @@ const userObj = {
     password : bcrypt.hashSync(request_body.password,8)
 }
 try{
+    //insert into mongodb
     const user_created = await user_model.create(userObj)
     /**
      * Return this user
